@@ -1,7 +1,14 @@
 import streamlit as st
-from final_chain_link import final_chain
 import tempfile
 import os
+import sys
+
+# Add src to Python path for Streamlit Cloud
+sys.path.append(os.path.join(os.path.dirname(__file__), 'src'))
+
+
+from final_chain_link import final_chain
+
 
 st.set_page_config(page_title="AI Job Recommender", layout="wide")
 
