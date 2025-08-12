@@ -69,13 +69,12 @@ project-root/
 ---
 
 ## 🖼️ Screenshots
-Place your screenshots inside the new App_Snaps folder and ensure the filenames match.
 
 - Home Page (Upload + Input)  
   ![Home Page](App_Snaps/App_Interface.png)
 
 - Recommendations (with Justifications)  
-  ![Results](App_Screenshot_Post_Job_Matching.png)
+  ![Results](App_Snaps/App_Screenshot_Post_Job_Matching.png)
 
 ---
 
@@ -173,9 +172,10 @@ Data Scientist, AI Engineer
 
 ---
 
-## 🏢 Industry Value & Scaling (Interview Talking Points)
+## 🏢 Industry Value & Scaling 
 - Business impact: Faster shortlisting, improved candidate experience, explainable recommendations.
 - Scale path: Move from local FAISS to distributed vector DB, add caching, hybrid retrieval (sparse+dense), and managed model endpoints.
 - Use cases: Talent acquisition (ATS/HR), job boards/marketplaces, university career services, staffing agencies.
 
 ---
+
