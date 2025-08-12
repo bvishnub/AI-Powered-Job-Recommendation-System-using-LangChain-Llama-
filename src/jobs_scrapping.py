@@ -1,7 +1,7 @@
 import requests
 from dotenv import load_dotenv
 import os 
-from settings import url,querystring,job_title
+# from settings import url,querystring,job_title
 from langchain.schema import Document
 
 

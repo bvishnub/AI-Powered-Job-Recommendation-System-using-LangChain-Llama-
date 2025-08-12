@@ -38,7 +38,11 @@ if st.button("Get Recommendations"):
             
             # Pass the file path as resume_data with processing indicator
             with st.spinner("🤖 Analyzing your resume and finding matching jobs..."):
-                results = final_chain.invoke(tmp_file_path)
+                # results = final_chain.invoke(tmp_file_path)
+                results = final_chain.invoke({
+                                             "file_path": tmp_file_path,
+                                             "job_title": job_title_query
+                                            })
             
             # Clean up temporary file
             os.unlink(tmp_file_path)

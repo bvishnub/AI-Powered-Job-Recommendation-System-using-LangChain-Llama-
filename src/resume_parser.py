@@ -43,16 +43,17 @@ def resume_parsing(tmp_file_path):
 
 
 def converting_resume_single_text(resume_data):
-    resume_text = (
-        f"Location: {resume_data['location']}\n"
-        f"Job Titles: {', '.join(resume_data.get('job_titles') or resume_data.get('job_title', []))}\n"
-        f"Experience Years: {resume_data['experience_years']}\n"
-        f"Skills: {', '.join(resume_data['skills'])}\n"
-        f"Education: {', '.join(resume_data['education'])}\n"
-        f"Certifications: {', '.join(resume_data['certifications'])}\n"
-        f"Preferred Job Type: {resume_data['preferred_job_type']}"
+    j = lambda v: ", ".join(map(str, v)) if isinstance(v, list) else str(v or "")
+    return (
+        f"Location: {j(resume_data.get('location'))}\n"
+        f"Job Titles: {j(resume_data.get('job_titles') or resume_data.get('job_title'))}\n"
+        f"Experience Years: {j(resume_data.get('experience_years'))}\n"
+        f"Skills: {j(resume_data.get('skills'))}\n"
+        f"Education: {j(resume_data.get('education'))}\n"
+        f"Certifications: {j(resume_data.get('certifications'))}\n"
+        f"Preferred Job Type: {j(resume_data.get('preferred_job_type'))}"
     )
-    return resume_text
+
 
 
 
